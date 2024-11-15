@@ -5,13 +5,15 @@ const paginacionDiv = document.querySelector('#paginacion');
 const registrosPorPagina = 40;
 let totalPaginas;
 let iterador;
-let paginaActual = 1;
+let paginaActual;
 
 window.onload = () => {
     formulario.addEventListener('submit', validarFormulario);
 }
 function validarFormulario(e) {
     e.preventDefault();
+
+    paginaActual = 1;
 
     const terminoBusqueda = document.querySelector('#termino').value;
 
